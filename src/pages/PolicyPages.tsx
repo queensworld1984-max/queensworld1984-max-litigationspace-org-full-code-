@@ -21,7 +21,7 @@ function PolicyPage({ title, children }: { title: string; children: React.ReactN
 export function RefundPolicy() {
   return (
     <PolicyPage title="Refund Policy">
-      <p>All paid subscriptions include a 14-day free trial. If you are unsatisfied within 14 days of your first paid billing cycle, contact us for a full refund.</p>
+      <p>New accounts start with a 7-day free trial (no credit card required). If you are unsatisfied within 14 days of your first paid billing cycle, contact us for a full refund.</p>
       <p>After 14 days, subscriptions are non-refundable for the current billing period. You may cancel at any time to stop future charges.</p>
       <p>To request a refund, contact billing@litigationspace.com within the refund window.</p>
     </PolicyPage>

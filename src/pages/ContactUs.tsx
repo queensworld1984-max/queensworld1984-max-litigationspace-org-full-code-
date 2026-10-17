@@ -3,7 +3,13 @@ import axios from 'axios'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import SEO from '../components/SEO'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
+import { trackConversion } from '../lib/gtag'
+
+const SUBJECT_PARAMS: Record<string, string> = {
+  'pro-bono-clinic': 'Pro Bono Clinic Application',
+  'partnership': 'Partnership / Nonprofit',
+}
 
 const FAQS = [
   {
@@ -38,6 +44,7 @@ const SUBJECTS = [
   'Billing & Subscription',
   'Account Access',
   'Feature Request',
+  'Pro Bono Clinic Application',
   'Partnership / Nonprofit',
   'Other',
 ]
@@ -57,7 +64,9 @@ const lbl: React.CSSProperties = {
 export default function ContactUs() {
   const [name, setName]       = useState('')
   const [email, setEmail]     = useState('')
-  const [subject, setSubject] = useState(SUBJECTS[0])
+  const [params] = useSearchParams()
+  const initialSubject = SUBJECT_PARAMS[params.get('subject') ?? ''] ?? SUBJECTS[0]
+  const [subject, setSubject] = useState(initialSubject)
   const [message, setMessage] = useState('')
   const [status, setStatus]   = useState<Status>('idle')
   const [errMsg, setErrMsg]   = useState('')
@@ -69,8 +78,9 @@ export default function ContactUs() {
     setErrMsg('')
     try {
       await axios.post('/api/contact', { name, email, subject, message })
+      trackConversion(subject === 'Pro Bono Clinic Application' ? 'proBono' : 'contact')
       setStatus('sent')
-      setName(''); setEmail(''); setMessage(''); setSubject(SUBJECTS[0])
+      setName(''); setEmail(''); setMessage(''); setSubject(initialSubject)
     } catch (err: any) {
       setStatus('error')
       setErrMsg(err?.response?.data?.detail || 'Failed to send. Please try again or email us directly at info@litigationspace.com.')

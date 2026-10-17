@@ -5,6 +5,7 @@ import Sidebar from '../components/Sidebar'
 import { useAuth } from '../contexts/AuthContext'
 import { motionAPI } from '../lib/api'
 import SEO from '../components/SEO'
+import { trackConversion } from '../lib/gtag'
 import type {
   MotionAnalysisResult,
   MotionRiskFlag,
@@ -355,6 +356,8 @@ export default function MotionAnalyzer() {
   }, [isAuthenticated])
 
   const refreshHistory = () => {
+    // Guests have no history; calling it would 401 and the api interceptor would bounce them to /login
+    if (!isAuthenticated) return
     motionAPI.listHistory()
       .then(r => setHistory((r.data as { analyses: HistoryItem[] }).analyses || []))
       .catch(() => {})
@@ -423,6 +426,7 @@ export default function MotionAnalyzer() {
         })
       }
       setResult(res.data)
+      trackConversion('motionAnalysis')
       setTimeout(() => resultRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 200)
       refreshHistory() // update history list after new analysis
     } catch (e: unknown) {

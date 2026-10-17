@@ -556,7 +556,7 @@ export default function CaseDetail() {
     setMsgs(p => [...p, userMsg]); setChatInput(''); setChatSend(true)
     try {
       const r = await axios.post(`/api/cases/${id}/chat`, { content: chatInput }, { headers: jHdrs() })
-      const reply = r.data?.response ?? r.data?.message ?? r.data?.content ?? '…'
+      const reply = r.data?.ai_message?.content ?? r.data?.response ?? r.data?.message ?? r.data?.content ?? '…'
       setMsgs(p => [...p, { role: 'assistant', content: reply }])
     } catch {
       setMsgs(p => [...p, { role: 'assistant', content: 'Error reaching AI. Please try again.' }])

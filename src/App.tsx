@@ -52,6 +52,7 @@ import OutreachDocumentReview from './pages/OutreachDocumentReview'
 import DocumentSign from './pages/DocumentSign'
 import CaseInvite from './pages/CaseInvite'
 import ContactUs from './pages/ContactUs'
+import FeaturePage from './pages/FeaturePage'
 import PublicInvoice from './pages/PublicInvoice'
 import ApproveScope from './pages/ApproveScope'
 import ApproveBilling from './pages/ApproveBilling'
@@ -141,6 +142,7 @@ function AppRoutes() {
       <Route path="/donate" element={<AboutBuildChampions />} />
       <Route path="/brand" element={<Brand />} />
       <Route path="/document-analyzer" element={<DocumentAnalyzer />} />
+      <Route path="/features/:slug" element={<FeaturePage />} />
       <Route path="/contact" element={<ContactUs />} />
       <Route path="/contact-us" element={<ContactUs />} />
 

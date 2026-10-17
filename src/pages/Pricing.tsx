@@ -27,8 +27,8 @@ const PLANS: Plan[] = [
     name: 'Basic',
     desc: 'Full platform access for individuals, researchers, and lightweight legal workflows.',
     hasTrial: true,
-    monthly: 49,
-    annual: 39,
+    monthly: 19,
+    annual: 228,
     per: '/mo',
     cta: 'Start Free Trial',
     ctaStyle: 'outline',
@@ -40,8 +40,8 @@ const PLANS: Plan[] = [
     name: 'Elite',
     desc: 'Enhanced litigation intelligence capacity for active legal professionals and larger caseloads.',
     hasTrial: false,
-    monthly: 129,
-    annual: 103,
+    monthly: 49,
+    annual: 588,
     per: '/mo',
     cta: 'Upgrade to Elite',
     ctaStyle: 'gold',
@@ -53,8 +53,8 @@ const PLANS: Plan[] = [
     name: 'Chambers',
     desc: 'Collaborative litigation infrastructure for firms, partnerships, and active legal teams managing shared litigation workflows.',
     hasTrial: false,
-    monthly: 179,
-    annual: 143,
+    monthly: 99,
+    annual: 1188,
     per: '/user/mo',
     cta: 'Choose Chambers',
     ctaStyle: 'outline',
@@ -68,7 +68,7 @@ const PLANS: Plan[] = [
     hasTrial: false,
     monthly: null,
     annual: null,
-    priceLabel: 'From $349',
+    priceLabel: 'From $129',
     per: '/user/mo',
     cta: 'Talk to Sales',
     ctaStyle: 'outline',
@@ -191,7 +191,7 @@ export default function Pricing() {
 
       <Navbar />
 
-      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '96px 36px 140px', boxSizing: 'border-box', position: 'relative', zIndex: 1 }}>
+      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '96px clamp(16px, 4vw, 36px) 140px', boxSizing: 'border-box', position: 'relative', zIndex: 1 }}>
 
         {/* Ornament */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 14, marginBottom: 32 }}>
@@ -205,7 +205,7 @@ export default function Pricing() {
           <div style={{ display: 'inline-block', fontFamily: 'Inter, sans-serif', fontSize: 11, fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase', color: '#9a7010', background: 'rgba(190,148,35,0.10)', border: '1px solid rgba(190,148,35,0.30)', borderRadius: 9999, padding: '5px 18px', marginBottom: 24 }}>
             Institutional-Grade Legal AI
           </div>
-          <h1 style={{ fontFamily: '"Playfair Display", Georgia, serif', fontSize: 58, fontWeight: 900, lineHeight: 1.08, margin: '0 0 20px', color: '#0c2461', letterSpacing: '-0.02em' }}>
+          <h1 style={{ fontFamily: '"Playfair Display", Georgia, serif', fontSize: 'clamp(36px, 8vw, 58px)', fontWeight: 900, lineHeight: 1.08, margin: '0 0 20px', color: '#0c2461', letterSpacing: '-0.02em' }}>
             Simple, Transparent Pricing
           </h1>
           <p style={{ fontSize: 16, color: '#111', maxWidth: 560, margin: '0 auto 40px', lineHeight: 1.7 }}>
@@ -217,7 +217,7 @@ export default function Pricing() {
             <span>
               LitigationSpace.org is operated by <strong>Build Champions</strong>, a 501(c)(3) nonprofit — subscription revenue helps fund reduced-cost and pro-bono access to justice technology.
               Approved pro bono legal clinics receive <strong>free access</strong>; {' '}
-              <a href="/contact" style={{ color: '#9a7010', fontWeight: 700, textDecoration: 'underline' }}>contact us to apply</a>.
+              <a href="/contact?subject=pro-bono-clinic" style={{ color: '#9a7010', fontWeight: 700, textDecoration: 'underline' }}>contact us to apply</a>.
             </span>
           </div>
 
@@ -231,10 +231,7 @@ export default function Pricing() {
               <button
                 onClick={() => setBilling('annual')}
                 style={{ background: billing === 'annual' ? 'linear-gradient(135deg,#D4A020,#C49010)' : 'none', border: 'none', cursor: 'pointer', fontFamily: 'Inter, sans-serif', fontSize: 13.5, fontWeight: billing === 'annual' ? 700 : 600, padding: '8px 26px', borderRadius: 9999, color: billing === 'annual' ? '#fff' : '#111', boxShadow: billing === 'annual' ? '0 3px 14px rgba(196,144,16,0.40)' : 'none', transition: 'all .2s' }}
-              >
-                Annual{' '}
-                <span style={{ display: 'inline-block', marginLeft: 6, background: 'rgba(190,148,35,0.12)', border: '1px solid rgba(190,148,35,0.30)', color: '#9a7010', fontSize: 10.5, fontWeight: 700, borderRadius: 9999, padding: '2px 9px', verticalAlign: 'middle', letterSpacing: '0.04em' }}>Save 20%</span>
-              </button>
+              >Annual</button>
             </div>
           </div>
         </div>
@@ -246,7 +243,7 @@ export default function Pricing() {
         </div>
 
         {/* PAYG card */}
-        <div style={{ maxWidth: 540, margin: '0 auto 72px', border: '1.5px solid #d8cba8', borderRadius: 20, padding: '44px 48px', background: '#fff', textAlign: 'center', boxShadow: '0 8px 40px rgba(0,0,0,0.09)', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ maxWidth: 540, margin: '0 auto 72px', border: '1.5px solid #d8cba8', borderRadius: 20, padding: '44px clamp(20px, 5vw, 48px)', background: '#fff', textAlign: 'center', boxShadow: '0 8px 40px rgba(0,0,0,0.09)', position: 'relative', overflow: 'hidden' }}>
           <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 3, background: 'linear-gradient(90deg,transparent,#C9A020,#E8C040,#C9A020,transparent)' }} />
           <h2 style={{ fontFamily: '"Playfair Display", Georgia, serif', fontSize: 26, fontWeight: 800, color: '#0c2461', margin: '0 0 10px', letterSpacing: '-0.01em' }}>Pay As You Go</h2>
           <p style={{ fontSize: 14, color: '#111', margin: '0 0 24px', lineHeight: 1.6 }}>No monthly commitment — buy credits and use LitigationSpace at your own pace.</p>
@@ -266,7 +263,7 @@ export default function Pricing() {
         </div>
 
         {/* Plan cards */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 22, marginBottom: 80, alignItems: 'start' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 240px), 1fr))', gap: 22, marginBottom: 80, alignItems: 'start' }}>
           {PLANS.map(plan => (
             <div key={plan.id} style={{ border: plan.popular ? '1.5px solid #C9A020' : '1.5px solid #ddd5b8', borderRadius: 20, padding: '36px 26px 30px', background: plan.popular ? '#FFFDF4' : '#fff', display: 'flex', flexDirection: 'column', position: 'relative', overflow: 'hidden', boxShadow: plan.popular ? '0 6px 32px rgba(190,148,35,0.16)' : '0 4px 24px rgba(0,0,0,0.07)', transition: 'transform .2s,box-shadow .2s' }}>
               {/* Top accent line */}
@@ -303,8 +300,8 @@ export default function Pricing() {
                       <span style={{ fontFamily: 'Inter, sans-serif', fontSize: 22, fontWeight: 600, verticalAlign: 'super' }}>$</span>
                       {price(plan)}
                     </div>
-                    <div style={{ fontSize: 13, color: '#111', marginTop: 6, letterSpacing: '0.02em' }}>{plan.per}</div>
-                    {billing === 'annual' && <div style={{ fontSize: 11.5, color: '#9a7010', marginTop: 5 }}>Billed annually · Save 20%</div>}
+                    <div style={{ fontSize: 13, color: '#111', marginTop: 6, letterSpacing: '0.02em' }}>{billing === 'annual' ? plan.per.replace('/mo', '/yr') : plan.per}</div>
+                    {billing === 'annual' && <div style={{ fontSize: 11.5, color: '#9a7010', marginTop: 5 }}>Billed annually</div>}
                   </>
                 )}
               </div>

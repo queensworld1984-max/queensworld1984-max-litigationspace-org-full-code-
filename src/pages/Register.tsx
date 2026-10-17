@@ -4,6 +4,7 @@ import { useAuth } from '../contexts/AuthContext'
 import Logo from '../components/Logo'
 import type { RegisterRequest } from '../types'
 import SEO from '../components/SEO'
+import { trackConversion } from '../lib/gtag'
 
 export default function Register() {
   const [form, setForm] = useState<RegisterRequest & { confirmPassword: string }>({
@@ -28,6 +29,8 @@ export default function Register() {
   const fromPath = locationState?.from
 
   function featureNameFromPath(path: string): string {
+    if (path.startsWith('/document-analyzer')) return 'Document Analyzer'
+    if (path.startsWith('/win-simulator')) return 'Win Simulator'
     if (path.startsWith('/cases')) return 'Case Vault'
     if (path.startsWith('/warroom') || path.startsWith('/war-room')) return 'War Room'
     if (path.startsWith('/drafting')) return 'Drafting Room'
@@ -66,6 +69,7 @@ export default function Register() {
         tenant_name: form.tenant_name,
         tenant_type: form.tenant_type,
       })
+      trackConversion('signup')
       if (needsVerification) {
         setVerificationSent(true)
       } else {
@@ -111,7 +115,7 @@ export default function Register() {
   return (
     <>
       <SEO
-        title="Sign Up — Start Your Free 7-Day Trial | LitigationSpace.org"
+        title="Sign Up — Start Your Free 7-Day Trial"
         description="Create your LitigationSpace.org account. Get access to the Motion Analyzer, Legal Brain AI, Case Vault, and more at reduced cost — free for approved pro bono clinics. No credit card required. Start your 7-day trial today."
         keywords="legal AI free trial, litigation software signup, motion analyzer free, legal software trial, litigation platform registration"
         path="/register"

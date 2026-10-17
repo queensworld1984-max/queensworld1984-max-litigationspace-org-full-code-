@@ -219,9 +219,8 @@ export default function Home() {
   return (
     <>
       <SEO
-        title="AI Litigation Platform for Attorneys"
-        description="LitigationSpace is the AI-powered operating system for litigation attorneys. Analyze motions, research case law, build trial strategy, draft documents, and find expert witnesses — all in one platform."
-        keywords="litigation platform, legal AI software, AI motion analyzer, legal research AI, case management software, trial preparation software, litigation attorney tools, law firm software, attorney software"
+        description="LitigationSpace.org is a nonprofit initiative of Build Champions, a 501(c)(3) organization, providing case management, legal research, and AI-assisted drafting tools at reduced cost for attorneys, pro se litigants, and legal aid organizations — free for approved pro bono legal clinics."
+        keywords="access to justice, nonprofit legal technology, pro bono legal tools, legal aid software, pro se litigant help, free legal research tools, Build Champions, 501(c)(3) legal technology, reduced-cost legal software"
         path="/"
       />
       <div style={{ minHeight: '100vh', background: '#0d1117', color: '#ffffff' }}>

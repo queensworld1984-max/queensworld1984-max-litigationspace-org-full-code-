@@ -7,7 +7,7 @@ export default function Directory() {
   return (
     <>
       <SEO
-        title="Attorney Directory — Coming Soon | LitigationSpace.org"
+        title="Attorney Directory — Coming Soon"
         description="LitigationSpace.org's attorney directory is coming soon. It will let you find litigation attorneys, legal experts, and law firms by jurisdiction, practice area, and specialty."
         keywords="attorney directory, litigation attorney directory, find litigation attorney, legal expert directory, law firm directory, find trial lawyer, attorney search, legal professional directory"
         path="/directory"

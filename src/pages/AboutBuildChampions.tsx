@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Logo from '../components/Logo'
 import SEO from '../components/SEO'
+import { trackConversion } from '../lib/gtag'
 
 const ZEFFY_URL  = 'https://www.zeffy.com/en-US/embed/donation-form/support-our-mission-136'
 const ZEFFY_LINK = 'https://www.zeffy.com/en-US/donation-form/support-our-mission-136'
@@ -34,7 +35,7 @@ export default function AboutBuildChampions() {
         <Link to="/" style={{ textDecoration: 'none' }}><Logo size="nav" litigationColor="#ffffff" /></Link>
         <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
           <Link to="/" style={{ color: 'rgba(255,255,255,0.65)', fontSize: 14, textDecoration: 'none', fontWeight: 500 }}>Back to site</Link>
-          <a href={ZEFFY_LINK} target="_blank" rel="noopener noreferrer"
+          <a href={ZEFFY_LINK} target="_blank" rel="noopener noreferrer" onClick={() => trackConversion('donateClick')}
             style={{ background: GOLD, color: '#000', fontWeight: 700, fontSize: 14, padding: '10px 22px', borderRadius: 8, textDecoration: 'none' }}>
             Donate Now
           </a>
@@ -80,7 +81,7 @@ export default function AboutBuildChampions() {
 
           {/* Hero CTA */}
           <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href={ZEFFY_LINK} target="_blank" rel="noopener noreferrer"
+            <a href={ZEFFY_LINK} target="_blank" rel="noopener noreferrer" onClick={() => trackConversion('donateClick')}
               style={{ background: `linear-gradient(135deg,${GOLD},#e0941f)`, color: '#000', fontWeight: 800, fontSize: 15, padding: '14px 36px', borderRadius: 10, textDecoration: 'none', display: 'inline-block' }}>
               ❤ Donate Now
             </a>
@@ -93,7 +94,7 @@ export default function AboutBuildChampions() {
       </div>
 
       {/* ── Main: form + sidebar ──────────────────────────────────────── */}
-      <div id="donation-form" style={{ maxWidth: 1160, margin: '0 auto', padding: '60px 24px', display: 'grid', gridTemplateColumns: '1fr 380px', gap: 40, alignItems: 'start' }}>
+      <div id="donation-form" style={{ maxWidth: 1160, margin: '0 auto', padding: '60px 24px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))', gap: 40, alignItems: 'start' }}>
 
         {/* ── Zeffy Donation Form ─────────────────────────────────────── */}
         <div>
@@ -203,7 +204,7 @@ export default function AboutBuildChampions() {
           <p style={{ textAlign: 'center', color: 'rgba(255,255,255,0.60)', fontSize: 15, maxWidth: 580, margin: '0 auto 48px', lineHeight: 1.7 }}>
             We operate LitigationSpace as a nonprofit because we believe the quality of your legal tools should never determine the outcome of your case.
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24, marginBottom: 48 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 240px), 1fr))', gap: 24, marginBottom: 48 }}>
             {[
               { icon: '⚖️', title: 'A Level Playing Field', desc: 'Large, well-funded firms have always had access to the best legal technology. Build Champions exists to ensure that everyone else does too — without compromise on quality.' },
               { icon: '🌍', title: 'Global Reach', desc: 'LitigationSpace serves legal professionals and individuals across 12 countries. Your donation helps us expand jurisdiction coverage, add languages, and reach more communities.' },
@@ -218,7 +219,7 @@ export default function AboutBuildChampions() {
           </div>
 
           <div style={{ textAlign: 'center' }}>
-            <a href={ZEFFY_LINK} target="_blank" rel="noopener noreferrer"
+            <a href={ZEFFY_LINK} target="_blank" rel="noopener noreferrer" onClick={() => trackConversion('donateClick')}
               style={{ display: 'inline-block', background: `linear-gradient(135deg,${GOLD},#e0941f)`, color: '#000', fontWeight: 800, fontSize: 16, padding: '16px 48px', borderRadius: 10, textDecoration: 'none' }}>
               ❤ Make a Donation
             </a>

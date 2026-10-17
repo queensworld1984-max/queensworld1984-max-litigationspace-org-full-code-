@@ -6,128 +6,173 @@
 
   <!-- Homepage -->
   <url>
-    <loc>https://litigationspace.com/</loc>
+    <loc>https://litigationspace.org/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- Core tools — highest priority -->
   <url>
-    <loc>https://litigationspace.com/motion-analyzer</loc>
+    <loc>https://litigationspace.org/motion-analyzer</loc>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://litigationspace.com/legal-brain</loc>
+    <loc>https://litigationspace.org/legal-brain</loc>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://litigationspace.com/legal-database</loc>
+    <loc>https://litigationspace.org/legal-database</loc>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://litigationspace.com/win-simulator</loc>
+    <loc>https://litigationspace.org/win-simulator</loc>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://litigationspace.com/document-analyzer</loc>
+    <loc>https://litigationspace.org/document-analyzer</loc>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
 
   <!-- Marketplace / Expert Bench -->
   <url>
-    <loc>https://litigationspace.com/live-bench</loc>
+    <loc>https://litigationspace.org/live-bench</loc>
     <changefreq>daily</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://litigationspace.com/marketplace</loc>
+    <loc>https://litigationspace.org/marketplace</loc>
     <changefreq>daily</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://litigationspace.com/directory</loc>
+    <loc>https://litigationspace.org/directory</loc>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://litigationspace.com/join-live-bench</loc>
+    <loc>https://litigationspace.org/join-live-bench</loc>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
 
   <!-- Pricing -->
   <url>
-    <loc>https://litigationspace.com/pricing</loc>
+    <loc>https://litigationspace.org/pricing</loc>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <!-- Blog -->
   <url>
-    <loc>https://litigationspace.com/blog</loc>
+    <loc>https://litigationspace.org/blog</loc>
     <changefreq>daily</changefreq>
     <priority>0.85</priority>
   </url>
 
   <!-- Company / Info -->
   <url>
-    <loc>https://litigationspace.com/contact</loc>
+    <loc>https://litigationspace.org/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.60</priority>
   </url>
   <url>
-    <loc>https://litigationspace.com/about-build-champions</loc>
+    <loc>https://litigationspace.org/about-build-champions</loc>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://litigationspace.com/brand</loc>
+    <loc>https://litigationspace.org/brand</loc>
     <changefreq>monthly</changefreq>
     <priority>0.40</priority>
   </url>
 
   <!-- Legal pages -->
   <url>
-    <loc>https://litigationspace.com/terms</loc>
+    <loc>https://litigationspace.org/terms</loc>
     <changefreq>yearly</changefreq>
     <priority>0.30</priority>
   </url>
   <url>
-    <loc>https://litigationspace.com/privacy</loc>
+    <loc>https://litigationspace.org/privacy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.30</priority>
   </url>
   <url>
-    <loc>https://litigationspace.com/refund-policy</loc>
+    <loc>https://litigationspace.org/refund-policy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.25</priority>
   </url>
   <url>
-    <loc>https://litigationspace.com/compliance</loc>
+    <loc>https://litigationspace.org/compliance</loc>
     <changefreq>yearly</changefreq>
     <priority>0.25</priority>
   </url>
   <url>
-    <loc>https://litigationspace.com/accessibility</loc>
+    <loc>https://litigationspace.org/accessibility</loc>
     <changefreq>yearly</changefreq>
     <priority>0.25</priority>
   </url>
 
   <!-- Auth -->
   <url>
-    <loc>https://litigationspace.com/register</loc>
+    <loc>https://litigationspace.org/register</loc>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
   <url>
-    <loc>https://litigationspace.com/login</loc>
+    <loc>https://litigationspace.org/login</loc>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
   </url>
 
+  <url>
+    <loc>https://litigationspace.org/features/case-vault</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://litigationspace.org/features/case-strategy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://litigationspace.org/features/drafting</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://litigationspace.org/features/judicial-workspace</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://litigationspace.org/features/team</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://litigationspace.org/features/billing</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://litigationspace.org/features/e-signature</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://litigationspace.org/features/analytics</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://litigationspace.org/features/legal-aid</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

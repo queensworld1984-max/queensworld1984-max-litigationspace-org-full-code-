@@ -33,4 +33,4 @@ Disallow: /sign/
 Disallow: /invoice/
 Disallow: /case-invite/
 
-Sitemap: https://litigationspace.com/sitemap.xml
+Sitemap: https://litigationspace.org/sitemap.xml
